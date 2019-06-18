@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Platform, ToastController, IonList } from '@ionic/angular';
+import { Component} from '@angular/core';
+import { Platform, ToastController, NavController, IonList } from '@ionic/angular';
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
@@ -12,15 +12,18 @@ export class Tab3Page {
   user = {};
 
 
-  constructor(private plt: Platform, private toastController: ToastController) {
+  constructor(private nav: NavController, private plt: Platform, private toastController: ToastController) {
     
   }
 
 
   // CREATE
-  addUser() {
+  addUser(user) {
+  	this.user = user;
       this.showToast('Item added!')
-      
+      this.nav.navigateForward('');
+
+
   
   }
 
