@@ -3,8 +3,8 @@
     <ion-title>
      All Users 
     </ion-title>
-    <ion-buttons slot="start">
-      <ion-button><ion-icon name="arrow-back"></ion-icon> Back</ion-button>
+    <ion-buttons slot="end">
+      <ion-button routerLink="../../tab3"><ion-icon name="add-user"></ion-icon> Add user</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -19,7 +19,7 @@
     <ion-card *ngFor="let user of (users | async)"  (click)="openDetails(user.id)">
       <ion-card-content>
         <b>Name</b>: {{user.name}} <br/>
-        <b>User Name</b>: {{user.userName}} <br/>
+        <b>User Name</b>: {{user.username}} <br/>
         <b>Email </b>: {{user.email}} <br/>
       </ion-card-content>
     </ion-card>
