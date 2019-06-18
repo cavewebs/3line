@@ -1,5 +1,7 @@
 {
   "name": "3line",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

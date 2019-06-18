@@ -1,9 +1,37 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button><ion-icon name="arrow-back"></ion-icon> Back</ion-button>
+    </ion-buttons>
     <ion-title>
-      Tab Three
+      Add New User 
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+	
+	<ion-item>
+    <ion-label position="fixed">Username</ion-label>
+    <ion-input [(ngModel)]="user.name"></ion-input>
+  </ion-item>
+ 
+  <ion-item>
+    <ion-label position="fixed">Full Name</ion-label>
+    <ion-input [(ngModel)]="user.username"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="fixed">Email</ion-label>
+    <ion-input [(ngModel)]="user.email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="fixed">Phone</ion-label>
+    <ion-input [(ngModel)]="user.phone"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="fixed">Website</ion-label>
+    <ion-input [(ngModel)]="user.website"></ion-input>
+  </ion-item>
+    <ion-button expand="full" (click)="addUser()">Add User!</ion-button>
+
+</ion-content>

@@ -7,11 +7,11 @@ import { ActivatedRoute } from '@angular/router';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 
 @Component({
-  selector: 'app-tab2',
-  templateUrl: 'tab2.page.html',
-  styleUrls: ['tab2.page.scss']
+  selector: 'app-user-detail',
+  templateUrl: './user-detail.page.html',
+  styleUrls: ['./user-detail.page.scss'],
 })
-export class Tab2Page implements OnInit {
+export class UserDetailPage implements OnInit {
 
   user: any;
   userImg='';
